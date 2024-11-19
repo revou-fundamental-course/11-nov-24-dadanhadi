@@ -12,96 +12,174 @@
         <img class="logo" src="assets/img/HitamResolusi 4x.png" alt="">
             <div class="menu">
                 <a href="#">Home</a>
+                <hr/>
                 <a href="#">Our Package</a>
+                <hr/>
                 <a href="#">Call Us</a>
             </div>
         </div>
     </header>
-    <hr/>
 
     <section class="booking">
         <div class="tagline-title">
-            <h2> Your Trusted Travel Agent's</h2>
+            <h1> Your Trusted Travel Agent's</h1>
             <p>Your happiness is our hapiness</p>
         </div>
         <div class="content">
             <div class="carousel">
                 <img src="assets/img/HitamResolusi 4x.png" alt="">
             </div>
-            <div class="card">
-                <div class="title-card">
-                    <h5>Contact Us</h5>
-                    <p>Sales kami akan menghubungi anda 1x24 Jam setelah dan kami terima</p>
+            <div class="warp-card">
+                <div class="card">
+                    <div class="title-card">
+                        <h5>Contact Us</h5>
+                        <p>Sales kami akan menghubungi anda 1x24 Jam setelah dan kami terima</p>
+                    </div>
+                    <form class="form_data" action="post">
+                        <label for="name_customer">Your Name</label>
+                        <input type="text" id="name_customer" placeholder="First and Last Name" required>
+                        <label for="email_customer">Email Address</label>
+                        <input type="email" id="email_customer" placeholder="example@email.com" required>
+                        <label for="interest_id">What are you interested in?</label>
+                        <select name="interest_name" id="interest_id" aria-placeholder="Select Option" required>
+                            <option value="" disabled selected>Select Option</option>
+                            <option value="service">Pelayanan</option>
+                            <option value="destination">Pilihan Destinasi Wisata</option>
+                            <option value="price">Harga Terjangkau</option>
+                        </select>
+                        <button type="submit" class="btn-send">SEND</button>
+                    </form>
                 </div>
-                <form class="form_data" action="post">
-                    <label for="name_customer">Your Name</label>
-                    <input type="text" id="name_customer" placeholder="First and Last Name" required>
-                    <label for="email_customer">Email Address</label>
-                    <input type="email" id="email_customer" placeholder="example@email.com" required>
-                    <label for="interest_id">What are you interested in?</label>
-                    <select name="interest_name" id="interest_id" aria-placeholder="Select Option" required>
-                        <option value="" disabled selected>Select Option</option>
-                        <option value="service">Pelayanan</option>
-                        <option value="destination">Pilihan Destinasi Wisata</option>
-                        <option value="price">Harga Terjankau</option>
-                    </select>
-                    <button class="btn-send">SEND</button>
-                </form>
             </div>
         </div>
     </section>
 
-    <section class="testimoni">
-        <div class="title-testimoni">
-            <h2>
-                Menurut Mereka Tentang Kita
-            </h2>
+    <section class="benefit">
+        <div class="title-benefit">
+            <p class="title-1">What we Serve</p>
+            <h1>Top Benefits For You 🔥</h1>
+            <p class="title-2">Try a variety benefits when using our services</p>
         </div>
-            <div class="group-card-testimoni">
-                <div class="card-testimoni">
-                    <div class="content-testimoni">
-                        <div class="header-testimonial">
-                            <img class="photo-customer" src="assets/img/HitamResolusi 4x.png" alt="">
-                            <div class="customer-id">
-                                <p class="name-testimoni">Maria Tanjung</p>
-                                <p class="job">Ibu Rumah Tangga</p>
-                            </div>
-                        </div>
-                        <hr/>
-                        <p class="testimonial">"Liburan keluarga kami menjadi pengalaman yang tak terlupakan berkat layanan dari [Nama Website Travel]. Semua diatur dengan sangat baik, mulai dari tiket pesawat, hotel, hingga itinerary harian. Anak-anak sangat menikmati kunjungan ke tempat wisata favorit mereka, dan kami tidak perlu khawatir soal apapun!"</p>
+        <div class="group-benefit">
+            <div class="card-benefit">
+                <div class="content-benefit">
+                    <img src="assets/img/HitamResolusi 4x.png" alt="">
+                    <div class="title-content-benefit">
+                        Lot of Choices
                     </div>
                 </div>
-                <div class="card-testimoni">
-                    <div class="content-testimoni">
-                        <div class="header-testimonial">
-                            <img class="photo-customer" src="assets/img/HitamResolusi 4x.png" alt="">
-                            <div class="customer-id">
-                                <p class="name-testimoni">Andi Pratama</p>
-                                <p class="job">Freelancer</p>
-                            </div>
-                        </div>
-                        <hr/>
-                        <p class="testimonial">"Sebagai solo traveler, saya selalu mencari layanan yang mudah dan aman. [Nama Website Travel] benar-benar memenuhi ekspektasi saya! Booking perjalanan sangat cepat, pilihan destinasinya beragam, dan semuanya sesuai dengan budget saya. Terima kasih untuk pengalaman yang luar biasa!"</p>
+                <div class="benefit-description">
+                    Total 450K+ destinations where you can explore!
+                </div>
+            </div>
+            <div class="card-benefit">
+                <div class="content-benefit">
+                    <img src="assets/img/HitamResolusi 4x.png" alt="">
+                    <div class="title-content-benefit">
+                        Lot of Choices
                     </div>
                 </div>
-                <div class="card-testimoni">
-                    <div class="content-testimoni">
-                        <div class="header-testimonial">
-                            <img class="photo-customer" src="assets/img/HitamResolusi 4x.png" alt="">
-                            <div class="customer-id">
-                                <p class="name-testimoni">Rina Wijaya</p>
-                                <p class="job">Enterpreneur</p>
-                            </div>
-                        </div>
-                        <hr/>
-                        <p class="testimonial">"Sebagai seorang entrepreneur dengan jadwal yang padat, saya sangat terbantu dengan layanan dari [Nama Website Travel]. Semua urusan perjalanan saya diatur dengan sangat profesional, mulai dari tiket, akomodasi, hingga transportasi lokal. Perjalanan bisnis sekaligus liburan saya berjalan lancar tanpa hambatan. Luar biasa!"</p>
+                <div class="benefit-description">
+                    Total 450K+ destinations where you can explore!
+                </div>
+            </div>
+            <div class="card-benefit">
+                <div class="content-benefit">
+                    <img src="assets/img/HitamResolusi 4x.png" alt="">
+                    <div class="title-content-benefit">
+                        Lot of Choices
+                    </div>
+                </div>
+                <div class="benefit-description">
+                    Total 450K+ destinations where you can explore!
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-package">
+        <div class="title-package">
+            <h1>Our Package</h1>
+        </div>
+       <div class="warp-group-package">
+        <div class="group-package">
+            <div class="card-package">
+                <div class="content-package">
+                    <img src="assets/img/HitamResolusi 4x.png" alt="">
+                    <div class="location-trip">
+                        <p class="title-trip">Bali</p>
+                        <p class="description-trip">Travel and tourism in Bali. Explore fascinating cultural heritage sites and culinary delights.</p>
                     </div>
                 </div>
             </div>
+            <div class="card-package">
+                <div class="content-package">
+                    <img src="assets/img/HitamResolusi 4x.png" alt="">
+                    <div class="location-trip">
+                        <p class="title-trip">Bali</p>
+                        <p class="description-trip">Travel and tourism in Bali. Explore fascinating cultural heritage sites and culinary delights.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-package">
+                <div class="content-package">
+                    <img src="assets/img/HitamResolusi 4x.png" alt="">
+                    <div class="location-trip">
+                        <p class="title-trip">Bali</p>
+                        <p class="description-trip">Travel and tourism in Bali. Explore fascinating cultural heritage sites and culinary delights.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-package">
+                <div class="content-package">
+                    <img src="assets/img/HitamResolusi 4x.png" alt="">
+                    <div class="location-trip">
+                        <p class="title-trip">Bali</p>
+                        <p class="description-trip">Travel and tourism in Bali. Explore fascinating cultural heritage sites and culinary delights.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-package">
+                <div class="content-package">
+                    <img src="assets/img/HitamResolusi 4x.png" alt="">
+                    <div class="location-trip">
+                        <p class="title-trip">Bali</p>
+                        <p class="description-trip">Travel and tourism in Bali. Explore fascinating cultural heritage sites and culinary delights.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-package">
+                <div class="content-package">
+                    <img src="assets/img/HitamResolusi 4x.png" alt="">
+                    <div class="location-trip">
+                        <p class="title-trip">Bali</p>
+                        <p class="description-trip">Travel and tourism in Bali. Explore fascinating cultural heritage sites and culinary delights.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </div>
+    </section>
+    <section class="call-us">
+        <div class="container">
+            <div class="content-call-us">
+                <h2 class="title-call-us">
+                    Ready to Create Memories That Last a Lifetime?
+                </h2>
+                <p class="description-call-us">
+                    Let us turn your travel dreams into reality. Book your next adventure with us and embrace the extraordinary.
+                </p>
+                <button class="btn-call-us" type="button">Call Us!</button>
+            </div>
+        </div>
     </section>
 
     <footer>
-
+        <p>Travel Agentku</p>
+        <div class="tnc">
+            <p>Terms of Service</p>
+            <p>Privacy Policy</p>
+        </div>
     </footer>
 </body>
 <script src="js/main.js"></script>
