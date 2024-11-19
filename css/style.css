@@ -106,13 +106,13 @@ header {
 .title-card > h5 {
     margin-bottom: 10px;
     margin-top: 0;
-    font-size: 16px;
+    font-size: 24px;
     color: #101a34;
 }
 
 .title-card > p {
     margin-top: 0;
-    font-size: 11px;
+    font-size: 14px;
     color: #43495a;
 }
 
@@ -124,6 +124,7 @@ header {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-left: 20px;
+    gap: 20px;
 }
 
 
@@ -131,57 +132,110 @@ header {
     flex-direction: column;
     display: flex;
     margin-top: 30px;
+    gap: 10px;
+}
+
+.content-name-customer {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-email-customer {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-interested-customer {
+    display: flex;
+    flex-direction: column;
 }
 
 label {
     margin-bottom: 5px;
-    font-size: 12px;
+    font-size: 18px;
 }
 
-input {
-    height: 30px;
-    padding: 4px 8px;
-    margin-bottom: 20px;
-    border: 1px solid #43495a;
-    border-radius: 5px;
-    font-size: 12px;
-}
-
-input:focus {
-    border-color: #5100ff;
-}
-
-select {
+#name_customer {
     height: 40px;
     padding: 4px 8px;
     margin-bottom: 20px;
     border: 1px solid #43495a;
     border-radius: 5px;
-    font-size: 12px;
+    font-size: 18px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#email_customer {
+    height: 40px;
+    padding: 4px 8px;
+    margin-bottom: 20px;
+    border: 1px solid ;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#name_customer:focus {
+    border-color: #5919e2;
+    outline: none;
+}
+
+#name_customer:focus::placeholder {
+    color: #ffffff;
+}
+
+#email_customer:focus {
+    border-color: #5919e2;
+    outline: none;
+}
+
+#email_customer:focus::placeholder {
+    color: #ffffff;
+}
+
+#interest_id:focus {
+    border-color: #5919e2;
+    
+    outline: none;
+}
+
+#interest_id {
+    height: 50px;
+    padding: 4px 8px;
+    margin-bottom: 20px;
+    border: 1px solid #43495a;
+    border-radius: 5px;
+    font-size: 18px;
 }
 
 .btn-send {
-    height: 38px;
+    height: 48px;
     border-radius: 5px;
     background-color: #5919e2;
     font-weight: 500;
     color: #ffffff;
+    font-size: 18px;
 }
 
 .group-benefit {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    margin-left: auto;
+    margin-left: 100px;
+    width: 100%;
+    height: 100%;
 }
 
 .benefit {
     display: flex;
     justify-content: start;
     align-items: center;
-    margin-top: 30px;
-    margin-left: 60px;
-    margin-right: 60px;
+    padding-top: 50px;
+    margin-top: 80px;
+    margin-left: 100px;
+    margin-right: 100px;
     margin-bottom: 30px;
+    height: 400px;
 }
 
 .title-benefit {
@@ -213,11 +267,22 @@ select {
 }
 
 .card-benefit {
+    display: flex;
+    flex-direction: column;
     background-color: #ffffff;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     width: auto;
+    /* height: fit-content; */
+    justify-content: start;
+    align-content: center;
+}
+
+.benefit-description {
+    display: flex;
+    flex-direction: column;
+    height: auto;
 }
 
 .content-benefit {
