@@ -19,17 +19,17 @@ nextButton.addEventListener('click', () => {
     showSlide(currentIndex + 1);
 });
 
-let autoSlide = setInterval(() => {
-    showSlide(currentIndex + 1);
-}, 5000);
+// let autoSlide = setInterval(() => {
+//     showSlide(currentIndex + 1);
+// }, 10000);
 
-carouselWrapper.addEventListener("mouseenter", () => {
-    clearInterval(autoSlide);
-});
+// carouselWrapper.addEventListener("mouseenter", () => {
+//     clearInterval(autoSlide);
+// });
 
-carouselWrapper.addEventListener("mouseleave", () => {
-    autoSlide = setInterval(() => {
-        showSlide(currentIndex + 1);
-    }, 5000);
-});
+// carouselWrapper.addEventListener("mouseleave", () => {
+//     autoSlide = setInterval(() => {
+//         showSlide(currentIndex + 1);
+//     }, 10000);
+// });
 
