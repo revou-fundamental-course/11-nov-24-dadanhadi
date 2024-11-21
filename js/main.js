@@ -1,3 +1,13 @@
+// 
+let menuMobile = document.getElementById('menu-mobile');
+let menu = document.querySelector('.menu');
+
+function activeMenu() {
+    menu.classList.toggle("active");
+}
+
+menuMobile.addEventListener('click', activeMenu);
+
 //deklarasikan id untuk bagian carousl di html dan dimasukkan ke variabel
 const carouselWrapper = document.querySelector('.carousel-wrapper');
 const listPhotos = document.querySelectorAll('.carousel-photo');
@@ -15,14 +25,16 @@ const showSlide = (index) => {
 };
 
 // jika menekan panah kiri di carousel untuk menggeser ke arah kanan
-prevButton.addEventListener('click', () => {
+function prevSlide() {
     showSlide(currentIndex - 1);
-});
+}
+prevButton.addEventListener('click', prevSlide);
 
 // jika menekan panah kanan di carousel untuk menggeser ke arah kiri
-nextButton.addEventListener('click', () => {
+function nextSlide() {
     showSlide(currentIndex + 1);
-});
+}
+nextButton.addEventListener('click', nextSlide);
 
 // auto slide setiap 10 detik
 let autoSlide = setInterval(() => {
@@ -30,9 +42,10 @@ let autoSlide = setInterval(() => {
 }, 10000);
 
 // jika mouse berada didalam element carousel makan autoslide berhenti
-carouselWrapper.addEventListener("mouseenter", () => {
+function stopSlide() {
     clearInterval(autoSlide);
-});
+}
+carouselWrapper.addEventListener("mouseenter", stopSlide);
 
 // jika mouse tidak berada didalam element carousel makan autoslide berjalan kembali
 carouselWrapper.addEventListener("mouseleave", () => {
@@ -52,6 +65,7 @@ function sendForm() {
     const name = document.getElementById("name_customer").value.trim();
     const email = document.getElementById("email_customer").value.trim();
     const interest = document.getElementById("interest_id").value;
+    const emailValidate = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     // pendeklarasian id untuk error notifikasi di bagian form dimasukkan ke dalam variabel kondisi jika tidak ada masalah
     let isValid = true;
@@ -59,13 +73,16 @@ function sendForm() {
     document.getElementById("email-error").textContent = "";
     document.getElementById("interest-error").textContent = "";
 
-
     if (name === "") {
         document.getElementById("name-error").textContent = "Your name must filled"; // jika input field nama kosong 
         document.getElementById("name_customer").focus(); //kursor akan kembali ke input field yang kosong
         isValid = false;
     } else if (email === "")  {
         document.getElementById("email-error").textContent = "Your email must filled"; //jika input field email kosong
+        document.getElementById("email_customer").focus(); //kursor akan kembali ke input field yang kosong
+        isValid = false;
+    } else if (!emailValidate.test(email)) {
+        document.getElementById("email-error").textContent = `Your email must include "@" and end with ".com".`; // Format email salah
         document.getElementById("email_customer").focus(); //kursor akan kembali ke input field yang kosong
         isValid = false;
     } else if (interest === "") {

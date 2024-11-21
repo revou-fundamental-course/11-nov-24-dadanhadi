@@ -26,6 +26,20 @@ header {
     padding-bottom: 10px;
 }
 
+/* hamburger button menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+}
+
+.menu-toggle > .bar {
+    background-color: #121212;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    transition: all 0.3s;
+}
+
 /* styling menu button */
 .menu {
     display: flex;
@@ -692,6 +706,29 @@ footer {
 
 /* responsif desain untuk handphone */
 @media only screen and (max-width: 799px) {
+    .menu-toggle {
+        display: flex;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 99%;
+        background-color: #ffffff;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        text-align: center;
+    }
+
+    .menu > hr {
+        display: none;
+    }
+
+    .menu.active {
+        display: flex;
+    }
     .booking {
         max-width: 460px;
        }
