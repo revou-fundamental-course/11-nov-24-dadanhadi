@@ -8,6 +8,7 @@
 </head>
 <body>
     <header>
+        <!-- pembuatan menu navigasi -->
         <div class="navigation">
         <img class="logo" src="assets/img/HitamResolusi 4x.png" alt="">
             <div class="menu">
@@ -19,12 +20,15 @@
             </div>
         </div>
     </header>
-
+    
+    <!-- pembuatan section untuk carousel dan form pengisian booking -->
     <section class="booking">
         <div class="tagline-title">
             <h1> Your Trusted Travel Agent's</h1>
             <p>Your happiness is our hapiness</p>
         </div>
+
+        <!-- bagian carousel -->
         <div class="content">
             <div class="carousel">
                 <div class="carousel-wrapper">
@@ -41,38 +45,61 @@
                 <button class="arrow-prev">&#10094;</button>
                 <button class="arrow-next">&#10095;</button>
             </div>
-            
+
+            <!-- bagian form booking -->
             <div class="wrap-card">
                 <div class="card">
                     <div class="title-card">
                         <h5>Contact Us</h5>
                         <p>Sales kami akan menghubungi anda 1x24 Jam setelah dan kami terima</p>
                     </div>
-                    <form class="form_data" action="post">
+                    <form class="form_data">
                         <div class="content-name-customer">
                             <label for="name_customer">Your Name</label>
-                            <input type="text" id="name_customer" placeholder="First and Last Name" required>
+                            <input type="text" id="name_customer" placeholder="First and Last Name">
+                            <div class="error" id="name-error"></div>
                         </div>
                         <div class="content-email-customer">
                             <label for="email_customer">Email Address</label>
-                            <input type="email" id="email_customer" placeholder="example@email.com" required>
+                            <input type="email" id="email_customer" placeholder="example@email.com">
+                            <div class="error" id="email-error"></div>
                         </div>
                         <div class="content-interested-customer">
                             <label for="interest_id">What are you interested in?</label>
-                        <select name="interest_name" id="interest_id" aria-placeholder="Select Option" required>
+                        <select name="interest_name" id="interest_id" aria-placeholder="Select Option">
                             <option value="" disabled selected>Select Option</option>
-                            <option value="service">Pelayanan</option>
-                            <option value="destination">Pilihan Destinasi Wisata</option>
-                            <option value="price">Harga Terjangkau</option>
+                            <option value="Beach">Beach</option>
+                            <option value="Mountain">Mountain</option>
+                            <option value="City Tour">City Tour</option>
                         </select>
+                        <div class="error" id="interest-error"></div>
                         </div>
-                        <button type="submit" class="btn-send">SEND</button>
+                        <button class="btn-send" type="button" onclick="sendForm()">SEND</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
+<!-- modal dialog untuk konfirmasi -->
+    <div class="modal" id="confirmation-modal">
+        <div class="modal-content">
+            <h3>Confirm your informations</h3>
+            <p id="modal-notification"></p>
+            <button onclick="confirmBooking()">Booking Travelling</button>
+            <button class="btn-cancel" onclick="cancelBooking()">Cancel Booking</button>
+        </div>
+    </div>
+<!-- modal untuk penyelesaian dialog -->
+    <div class="modal" id="final-modal">
+        <div class="modal-content">
+            <h3>Booking Confirmed</h3>
+            <p id="final-modal-notification"></p>
+            <button onclick="closeModal()">Kembali</button>
+        </div>
+    </div>
+
+    <!-- pembuatan untuk section benefit -->
     <section class="benefit">
         <div class="title-benefit">
             <p class="title-1">What we Serve</p>
@@ -127,6 +154,7 @@
         </div>
     </section>
 
+    <!-- pembuatan untuk section pilihan paket -->
     <section class="our-package">
         <div class="title-package">
             <h1>Our Package</h1>
@@ -190,6 +218,8 @@
             </div>
        </div>
     </section>
+
+    <!-- pembuatan untuk section call us -->
     <section class="call-us">
         <div class="container">
             <div class="content-call-us">
@@ -204,6 +234,7 @@
         </div>
     </section>
 
+    <!-- bagian footer -->
     <footer>
         <div class="container-footer">
             <p class="title-footer">Travel Agentku</p>
